@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProMontaža & Popravci - Vaši Stručnjaci za Uređenje Doma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1556912173-3bb406ef7e77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">ProMontaža & Popravci</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#usluge" class="text-gray-600 hover:text-blue-600 transition duration-300">Usluge</a>
+                <a href="#galerija" class="text-gray-600 hover:text-blue-600 transition duration-300">Galerija</a>
+                <a href="#ai-procjena" class="text-gray-600 hover:text-blue-600 transition duration-300">AI Procjena</a>
+                <a href="#onama" class="text-gray-600 hover:text-blue-600 transition duration-300">O nama</a>
+                <a href="#kontakt" class="text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+            </div>
+            <a href="#kontakt" class="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Zatražite ponudu</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4">
+            <a href="#usluge" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Usluge</a>
+            <a href="#galerija" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Galerija</a>
+            <a href="#ai-procjena" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">AI Procjena</a>
+            <a href="#onama" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">O nama</a>
+            <a href="#kontakt" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Kontakt</a>
+            <a href="#kontakt" class="block text-center mt-2 mx-4 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Zatražite ponudu</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white">
+        <div class="container mx-auto px-6 py-32 md:py-48 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Kvalitetne Montaže i Popravci za Vaš Dom</h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Od zapanjujućih transformacija kuhinja do svakodnevnih popravaka, unosimo vještinu i pouzdanost u svaki projekt.</p>
+            <a href="#kontakt" class="bg-blue-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-700 transition duration-300 text-lg">Zatražite Besplatnu Ponudu</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="usluge" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Naše Usluge</h2>
+                <p class="text-gray-600 mt-2">Profesionalna rješenja za sve vaše kućne potrebe.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Item 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-couch fa-3x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Montaža Namještaja</h3>
+                    <p class="text-gray-600">Stručna montaža i postavljanje svih vrsta namještaja, osiguravajući savršeno pristajanje i završnu obradu u vašem domu.</p>
+                </div>
+                <!-- Service Item 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-kitchen-set fa-3x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Kuhinje i Stolarija</h3>
+                    <p class="text-gray-600">Kompletna ugradnja kuhinjskih elemenata, polica po mjeri i rješenja za pohranu kako biste stvorili kuhinju iz snova.</p>
+                </div>
+                <!-- Service Item 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-tools fa-3x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Opći Kućni Popravci</h3>
+                    <p class="text-gray-600">Pouzdane "handyman" usluge za sve sitne poslove, od popravka slavina do postavljanja televizora i vješanja slika.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galerija" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Naši Radovi</h2>
+                <p class="text-gray-600 mt-2">Uvid u kvalitetu i brigu koju ulažemo u svaki projekt.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Gallery Item 1: Montaža Kuhinje -->
+                <div class="relative overflow-hidden rounded-lg shadow-lg group h-64">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Montaža kuhinje" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Slika+nedostupna';">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
+                        <h3 class="text-white text-lg font-semibold text-center">Montaža Kuhinje</h3>
+                    </div>
+                </div>
+                <!-- Gallery Item 2: Sastavljanje Namještaja -->
+                <div class="relative overflow-hidden rounded-lg shadow-lg group h-64">
+                    <img src="https://images.unsplash.com/photo-1594026112272-cb45414138a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Sastavljanje namještaja" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Slika+nedostupna';">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
+                        <h3 class="text-white text-lg font-semibold text-center">Sastavljanje Namještaja</h3>
+                    </div>
+                </div>
+                <!-- Gallery Item 3: Stolarski Radovi -->
+                <div class="relative overflow-hidden rounded-lg shadow-lg group h-64">
+                    <img src="https://images.unsplash.com/photo-1627482835994-5b4354023a54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Stolarski radovi" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Slika+nedostupna';">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
+                        <h3 class="text-white text-lg font-semibold text-center">Stolarski Radovi</h3>
+                    </div>
+                </div>
+                <!-- Gallery Item 4: Kupaonski Namještaj -->
+                 <div class="relative overflow-hidden rounded-lg shadow-lg group h-64">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Postavljanje kupaonskog namještaja" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Slika+nedostupna';">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
+                        <h3 class="text-white text-lg font-semibold text-center">Kupaonski Namještaj</h3>
+                    </div>
+                </div>
+                <!-- Gallery Item 5: Montaža TV-a -->
+                <div class="relative overflow-hidden rounded-lg shadow-lg group h-64">
+                    <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Montaža TV-a" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Slika+nedostupna';">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
+                        <h3 class="text-white text-lg font-semibold text-center">Montaža TV-a</h3>
+                    </div>
+                </div>
+                <!-- Gallery Item 6: Kućni Popravci -->
+                <div class="relative overflow-hidden rounded-lg shadow-lg group h-64">
+                    <img src="https://images.unsplash.com/photo-1473963453238-0336b136475a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Popravci u kućanstvu" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Slika+nedostupna';">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
+                        <h3 class="text-white text-lg font-semibold text-center">Kućni Popravci</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Estimator Section -->
+    <section id="ai-procjena" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">AI Procjena Troškova Projekta</h2>
+                <p class="text-gray-600 mt-2">Opišite nam svoj projekt i dobijte brzu, informativnu procjenu troškova pomoću umjetne inteligencije.</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <label for="project-description" class="block text-gray-700 font-medium mb-2">Opišite svoj projekt:</label>
+                    <textarea id="project-description" name="project-description" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Npr. trebam montažu nove kuhinje iz Ikee, uključujući 5 gornjih i 5 donjih elemenata, te ugradnju sudopera i radne ploče."></textarea>
+                </div>
+                <button id="estimate-button" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-magic mr-2"></i> Procijeni Troškove
+                </button>
+                <div id="loader" class="hidden loader"></div>
+                <div id="estimation-result" class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg text-gray-700" style="display: none; white-space: pre-wrap;"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Us Section -->
+    <section id="onama" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" alt="Vlasnik tvrtke" class="rounded-lg shadow-xl w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x400/4A5568/FFFFFF?text=Slika nije dostupna';">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Vaš Pouzdani Lokalni Majstor</h2>
+                <p class="text-gray-600 mb-4">ProMontaža & Popravci osnovani su na jednostavnom principu: pružiti visokokvalitetne, pouzdane usluge uređenja doma našoj zajednici. S više od 10 godina iskustva, ponosimo se pedantnom pažnjom prema detaljima, prijateljskom uslugom i predanošću da posao obavimo kako treba iz prvog puta.</p>
+                <p class="text-gray-600">Svaki dom tretiramo kao da je naš vlastiti i vjerujemo u izgradnju trajnih odnosa s klijentima temeljenih na povjerenju i izvanrednim rezultatima.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="py-20 bg-blue-700 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Javite Nam Se</h2>
+                <p class="text-blue-200 mt-2">Spremni za početak novog projekta? Kontaktirajte nas za besplatnu, neobvezujuću ponudu.</p>
+            </div>
+            <div class="max-w-4xl mx-auto bg-white text-gray-800 rounded-lg shadow-2xl p-8 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Kontakt Informacije</h3>
+                        <div class="space-y-4 text-gray-600">
+                            <p><i class="fas fa-phone-alt text-blue-600 mr-3"></i> (09X) XXX-XXXX</p>
+                            <p><i class="fas fa-envelope text-blue-600 mr-3"></i> kontakt@promontaza-popravci.hr</p>
+                            <p><i class="fas fa-map-marker-alt text-blue-600 mr-3"></i> Usluge na području Zagreba i okolice</p>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-bold text-gray-900">Radno Vrijeme</h4>
+                            <p class="text-gray-600">Ponedjeljak - Petak: 8:00 - 18:00</p>
+                            <p class="text-gray-600">Subota: 9:00 - 15:00</p>
+                        </div>
+                    </div>
+                    <form id="contactForm">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Ime i prezime</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Kako vam možemo pomoći?</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Pošalji Poruku</button>
+                    </form>
+                </div>
+            </div>
+             <div id="form-submission-message" class="text-center mt-6 text-white text-lg font-medium" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 ProMontaža & Popravci. Sva prava pridržana.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Basic Page Functionality ---
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Handle contact form submission
+        const contactForm = document.getElementById('contactForm');
+        const formSubmissionMessage = document.getElementById('form-submission-message');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            formSubmissionMessage.textContent = 'Hvala na poruci! Javit ćemo vam se u najkraćem mogućem roku.';
+            formSubmissionMessage.style.display = 'block';
+            formSubmissionMessage.style.color = 'white';
+            contactForm.reset();
+            setTimeout(() => {
+                formSubmissionMessage.style.display = 'none';
+            }, 5000);
+        });
+
+        // --- Gemini API Functionality ---
+        const estimateButton = document.getElementById('estimate-button');
+        const projectDescription = document.getElementById('project-description');
+        const estimationResult = document.getElementById('estimation-result');
+        const loader = document.getElementById('loader');
+
+        estimateButton.addEventListener('click', async () => {
+            const description = projectDescription.value;
+            if (!description.trim()) {
+                estimationResult.textContent = 'Molimo unesite opis projekta.';
+                estimationResult.style.display = 'block';
+                return;
+            }
+
+            loader.classList.remove('hidden');
+            estimationResult.style.display = 'none';
+            estimateButton.disabled = true;
+
+            const prompt = `Na temelju sljedećeg opisa projekta za kućne popravke ili montažu u Hrvatskoj, generiraj grubu procjenu troškova u eurima. Navedi moguće raspone cijena za materijal i rad. Budi jasan i sažet, koristi liste za preglednost. Naglasi da je ovo informativna procjena. Opis projekta: "${description}"`;
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // API ključ se automatski dodaje
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API greška: ${response.statusText}`);
+                }
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    estimationResult.textContent = text;
+                } else {
+                    throw new Error("Nije primljen valjan odgovor od AI modela.");
+                }
+
+            } catch (error) {
+                console.error("Greška pri dohvaćanju procjene:", error);
+                estimationResult.textContent = 'Došlo je do pogreške prilikom generiranja procjene. Molimo pokušajte ponovno kasnije.';
+            } finally {
+                loader.classList.add('hidden');
+                estimationResult.style.display = 'block';
+                estimateButton.disabled = false;
+            }
+        });
+
+    </script>
+
+</body>
+</html>
